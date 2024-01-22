@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>portfolio</title>
+        <link rel="stylesheet" type="text/css" href="styles.css">
+        <link rel="stylesheet" type="text/css" href="http://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/move02/4-1/css/reset.css">
+        <link rel="stylesheet" type="text/css" href="http://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/move02/4-1/css/4-1.css">
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="script.js"></script>
+    </head>
+
+    <body>
+        <!---読み込み画面-->
+        <div id="splash">
+            <div id="splash-logo"><img src=images/coffee.png alt="読み込み中"><br>Loading<br></div>
+        </div>
+        <div class="splashbg"></div>
+        <!---読み込み画面-->
+
+        <div id="container">
+            <header>
+                <img class="Ryuji" src="images/logo.PNG">
+                <div class="hamburger-menu">&#9776;</div>
+                <nav>
+                    <a href="index.html"><img class="home" src="images/home.png"></a>
+                  <a href="works.html">WORKS</a>
+                  <a href="about.html">ABOUT</a>
+                  <a href="concept.html">CONCEPT</a>
+                  <a href="skill.html">SKILL</a>
+                  <a href="favorite.html">FAVORITE</a>
+                </nav>
+            </header>
+            
+              <div class="overlay">
+                <div class="menu">
+                    <a href="index.html"><img class="home" src="images/home.png"></a>
+                    <a href="works.html">WORKS</a>
+                    <a href="about.html">ABOUT</a>
+                    <a href="concept.html">CONCEPT</a>
+                    <a href="skill.html">SKILL</a>
+                    <a href="favorite.html">FAVORITE</a>
+                </div>
+              </div>
+
+              <style>
+                body {
+                  margin: 0;
+                  font-family: Arial, sans-serif;
+                  overflow: hidden; /* スクロールを禁止 */
+                }
+            
+                header {
+                  
+                  padding: 15px;
+                  
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                }
+            
+                nav {
+                  display: flex;
+                }
+            
+                nav a {
+                  font-family: Kalam;
+                  font-size: 2vw;
+                  text-decoration: none;
+                  margin: 0 10px;
+                  text-decoration: none;
+                  color: black;
+                }
+            
+                .hamburger-menu {
+                  display: none;
+                  cursor: pointer;
+                  font-size: 50px;
+                }
+            
+                .overlay {
+                  display: none;
+                  position: fixed;
+                  top: 0;
+                  left: 0;
+                  width: 100%;
+                  height: 100%;
+                  background-color: #e8e1d1; /* 背景色を変更 */
+                  justify-content: center;
+                  align-items: center;
+                  z-index: 1000;
+                }
+            
+                .menu {
+                  
+                  padding: 20px;
+                  text-align: center;
+                }
+            
+                .menu a {
+                    text-decoration: none;
+                    font-family: Kalam;
+                    font-size: 5vw;
+                    text-decoration: none;
+                    margin: 15px 0;
+                    display: block;
+                    color: black;
+                }
+            
+                @media (max-width: 800px) {
+                  nav {
+                    display: none;
+                    flex-direction: column;
+                    text-align: center;
+                    width: 100%;
+                    position: absolute;
+                    top: 60px; /* ヘッダーの高さに合わせて調整 */
+                    left: 0;
+                    
+                  }
+            
+                  .hamburger-menu {
+                    display: block;
+                  }
+            
+                  .overlay.show {
+                    display: flex;
+                  }
+            
+                  nav.show {
+                    display: flex;
+                  }
+                }
+              </style>
+              <script>
+                const overlay = document.querySelector('.overlay');
+                const nav = document.querySelector('nav');
+                const hamburgerMenu = document.querySelector('.hamburger-menu');
+            
+                // ハンバーガーメニューがクリックされたとき
+                hamburgerMenu.addEventListener('click', function() {
+                  toggleMenu();
+                });
+            
+                // オーバーレイがクリックされたとき
+                overlay.addEventListener('click', function() {
+                  toggleMenu();
+                });
+            
+                // メニュー内のリンクがクリックされたとき
+                document.querySelectorAll('.menu a').forEach(function(link) {
+                  link.addEventListener('click', function() {
+                    toggleMenu();
+                  });
+                });
+            
+                function toggleMenu() {
+                  overlay.classList.toggle('show');
+                  nav.classList.toggle('show');
+            
+                  // スクロールの制御
+                  if (overlay.classList.contains('show')) {
+                    document.body.style.overflow = 'hidden'; // スクロールを禁止
+                  } else {
+                    document.body.style.overflow = ''; // スクロールを有効にする
+                  }
+                }
+              </script>
+        
+        <main>
+            <a class="pagetop" href="#"><div class="pagetop__arrow"></div></a>
+            <div class="run">
+                <div class="run-title">
+                    <h1><span>・</span>羽淵竜志のポートフォリオサイト<span>・</span></h1>
+                </div>
+                <div class="preview">
+                    <img src="images/habuchi-pc.PNG">
+                    <img src="images/habuchi-sp.PNG">
+                </div>
+                <div class="run-cont">
+                    <h2>制作期間：３週間</h2>
+                    <h2>使用技術：Photoshop/Figma<br>　　　　　HTML/CSS/JavaScript</h2>
+                    <h2>対応機種：SP・PC</h2>
+                </div>
+                <div class="comment">
+                    <h1>ーCOMMENTー</h1>
+                    <h2>⚫︎サイトについて</h2>
+                    <p>私のポートフォリオサイトです。これまでの実績及び経歴・スキルをまとめてあります。</p>
+                    <h2>⚫︎学んだこと</h2>
+                    <p>・自分のイラストを組み込むデザイン
+                    <br>・0から100までデザインを自分で全て考える楽しさと難しさ
+                    <br>・ロゴの作り方</p>
+                </div>
+                <div class="runrun">
+                    <img src="images/portfolio.png">
+                    <div class="runrun-cont">
+                        <h2><span style="font-size: 300%;">①</span><br>トップ画面には大好きなコーヒーのフリー画像と自作のコーヒーをドリップするイラストを配置し、暖かく柔らかい雰囲気を作り出しました。</h2>
+                        <h2><span style="font-size: 300%;">②</span><br>デザイナーとしての自分を知っていただく最大の近道として、作品集を一番に配置しました。この後の項目も知っていただきたい順に配置しました。</h2>
+                        <h2><span style="font-size: 300%;">③</span><br>２番目に自己紹介を配置しました。トップページでは大まかな自己紹介文のみとし、moreボタンを押すとより具体的な自己紹介ページに遷移します。</h2>
+                        <h2><span style="font-size: 300%;">④</span><br>３番目にコンセプト紹介を配置しました。おしゃれな構図にあえて情報を少なくすることで詳細ページへの意欲向上を狙っています。</h2>
+                        <h2><span style="font-size: 300%;">⑤</span><br>４番目に自分のスキル一覧を配置しました。最初オリジナルのカラーアイコンを配置していましたが、統一感を出すために白黒アイコンを自作いたしました。</h2>
+                        <h2><span style="font-size: 300%;">⑥</span><br>最後に好きなもの一覧を配置しました。こちらもスキルと同様に統一感のあるアイコンで揃えました。</h2>
+                        <h2><span style="font-size: 300%;">⑦</span><br>フッターには中央の自作イラストで暖かさと柔らかさを、上部の波線でコーヒーを表現しました。</h2>
+                    </div>
+                </div>
+
+                <div class="run-final">
+                    <h1>作ってみて</h1>
+                    <img src="images/tea.png">
+                    <p>　初めて自分のものをデザインしました。他者からの依頼などは当然ないので全て自分で考え作ることがとても楽しいと同時に難しかったです。<br>　苦手意識を持っていたイラストやロゴ作成にも挑戦し、個人的にはとても上手くいきました。<br>　具体的なデッドラインがない中で計画を立ててその通りに作業を進めることができたのでとても自信になる制作でした。</p>
+                </div>
+            </div>
+
+            <div class="works-cont">
+                <div class="works-cont1">
+                    <div class="ruruna">
+                        <a href="ruruna.html"><img class="garalley" src="images/worksr1.PNG"></a>
+                        <p>可愛い系イラストレーター<br>RさんのWebサイト</p>
+                    </div>
+                    <div class="ruruna">
+                        <a href="oharu.html"><img class="garalley" src="images/works-o.PNG"></a>
+                        <p>ベージュ系イラストレーター<br>OさんのWebサイト</p>
+                    </div>
+                    <div class="ruruna">
+                        <a href="ruruna2.html"><img class="garalley" src="images/works-r.PNG"></a>
+                        <p>可愛い系イラストレーター<br>RさんのWebサイト2</p>
+                    </div>
+                </div>
+                <div class="works-cont2">
+                    <div class="ruruna">
+                        <a href="game.html"><img class="garalley" src="images/g-game.PNG"></a>
+                        <p>ノベルゲーム<br>NのWebサイト</p>
+                    </div>
+                    <div class="ruruna">
+                        <a href="habuchi.html"><img class="garalley" src="images/habuchi.PNG"></a>
+                        <p>羽淵竜志の<br>ポートフォリオ</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <section class="containor">
+                <div class="wave"></div>
+            </section>
+            <div class="human">
+                <img class="read" src="images/human.PNG">
+            </div>
+            <div class="foot">
+                <a href="index.html"><img src="images/logo.png"></a>
+                <div class="menu-f">
+                    <div class="menu-f1">
+                        <a href="works.html">WORKS</a>                        
+                        <a href="about.html">ABOUT</a>
+                    </div>
+                    <div class="menu-f2">                      
+                        <a href="concept.html">CONCEPT</a>                       
+                        <a href="skill.html">SKILL</a>                        
+                        <a href="favorite.html">FAVORITE</a>
+                    </div>
+                </div>
+            </div>
+            <p>Ryuji Habuchi@2024</p>
+        </footer>
+        </div>
+    </body>
+</html>

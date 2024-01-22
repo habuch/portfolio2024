@@ -1,0 +1,1766 @@
+#splash {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background: #853F3F;
+	z-index: 9999999;
+	text-align:center;
+	
+}
+
+#splash-logo {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+#splash-logo img,
+#splash-logo canvas{
+	width:50px;
+}
+
+/*画面遷移アニメーション*/
+
+.splashbg{
+	position: fixed;
+	top: 0;
+	right:0;
+	bottom:0;
+	left: 0;
+	border-width: 0px;/*開始はボーダーの太さは0*/
+	border-style:solid;
+    border-color: #853F3F;/*拡大する四角の色*/
+	animation-duration:.5s;
+	animation-fill-mode:forwards;
+}
+
+@keyframes backBoxAnime{
+	99.9% {/*アニメーション終了ぎりぎりまで*/
+        z-index: 2;/*最前面に*/
+		border-width: 0px;/*開始はボーダーの太さは0*/
+	}
+    100%{
+       z-index: -1; /*最背面に*/
+        border-width: 0px;/*終了はボーダーの太さは0*/
+    }
+}
+
+/*画面遷移の後現れるコンテンツ設定*/
+#container{
+    position: relative;
+	opacity: 0;/*はじめは透過0に*/
+}
+
+/*bodyにappearクラスがついたら出現*/
+body.appear #container{
+	animation-name:PageAnimeAppear;
+	animation-duration:1s;
+	animation-delay:0.2s;
+	animation-fill-mode:forwards;
+	opacity: 0;
+}
+
+@keyframes PageAnimeAppear{
+	0% {
+	opacity: 0;
+	}
+	100% {
+	opacity: 1;
+}
+}
+
+body{
+    overflow-x: hidden;
+    background:#853F3F;
+    font-family: 'Kosugi Maru', sans-serif;
+	color: #333;
+	font-size:1rem;
+	line-height:1.85;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-text-size-adjust: 100%; 
+	word-wrap: break-word;
+    letter-spacing: 0.2em;
+    margin: 0;
+    padding: 0;
+}
+
+body.appear{
+    background:#F6F2EA;
+    overflow: hidden;
+}
+
+.Ryuji {
+    width: 40%;
+}
+
+.home {
+    width: 30px;
+}
+
+
+
+/*HOME*/
+
+span {
+    color: #cd9500;
+}
+
+/*top*/
+
+h1 {
+    font-family: Kalam;
+}
+
+h2 {
+    font-family: Tsukimi Rounded;
+}
+
+.more {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+}
+
+.more img {
+    width: 300px;
+}
+
+.top {
+    display: flex;
+    justify-content: space-between;
+    margin: 50px;
+}
+
+.drip {
+    width: 25%;
+}
+
+.top-image {
+    border-radius: 25px;
+    width: 60%;
+}
+
+/*works*/
+.works {
+    margin-top: 300px;
+}
+
+.works-title h1 {
+    font-family: Kalam;
+    font-size: 400%;
+}
+
+.works-title h2 {
+    font-size: 200%;
+}
+
+.works-title h1,
+.works-title h2 {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 10px 0;
+    letter-spacing: 0.2em;
+}
+
+.works-main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+.works-main img {
+    width: 50%;
+    border-radius: 25px;
+}
+
+.cloud {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 30px;
+}
+/*works*/
+
+/*about*/
+.about{
+    margin-top: 300px;
+}
+
+.about-title h1 {
+    font-family: Kalam;
+    font-size: 400%;
+}
+
+.about-title h2 {
+    font-size: 200%;
+}
+
+.about-title h1,
+.about-title h2 {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 10px 0;
+    letter-spacing: 0.2em;
+}
+
+.intro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+    margin: 50px 100px 0 100px;
+}
+.introduction {
+    font-size: 150%;
+}
+
+.myface {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+}
+/*about*/
+
+/*concept*/
+
+.concept{
+    margin-top: 300px;
+}
+
+.concept-title h1 {
+    font-family: Kalam;
+    font-size: 400%;
+}
+
+.concept-title h2 {
+    font-size: 200%;
+}
+
+.concept-title h1,
+.concept-title h2 {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 10px 0;
+    letter-spacing: 0.2em;
+}
+
+.concept-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+    width: 100%;
+}
+
+
+/*concept*/
+
+/*skill*/
+.skill{
+    margin-top: 300px;
+}
+
+.skill-title h1 {
+    font-family: Kalam;
+    font-size: 400%;
+}
+
+.skill-title h2 {
+    font-size: 200%;
+}
+
+.skill-title h1,
+.skill-title h2 {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 0;
+    margin: 10px 0;
+    letter-spacing: 0.2em;
+}
+
+.skill-hontai {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+    margin-top: 100px;
+}
+
+.skill-main1 {
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+}
+
+.skill-main2 {
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+}
+
+.skill-main3 {
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+}
+
+
+.skill-main1 img{
+    width: 150px;
+    background-color: #e8e1d1;
+    border-radius: 25px;
+}
+
+.skill-main2 img{
+    width: 150px;
+    background-color: #e8e1d1;
+    border-radius: 25px;
+}
+
+.skill-main3 img{
+    width: 150px;
+    background-color: #e8e1d1;
+    border-radius: 25px;
+}
+
+/*skill*/
+
+/*favorite*/
+.favorite {
+    margin-top: 300px;
+}
+
+.favorite-title h1 {
+    font-family: Kalam;
+    font-size: 400%;
+}
+
+.favorite-title h2 {
+    font-size: 200%;
+}
+
+.favorite-title h1,
+.favorite-title h2 {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 0;
+    letter-spacing: 0.2em;
+}
+
+.favorite-main1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    
+    gap: 100px;
+}
+
+.favorite-main2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    
+    gap: 100px;
+}
+
+.favorite-main3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    
+    gap: 100px;
+}
+
+.favorite-main4 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    
+    gap: 100px;
+}
+
+.favorite-main1 img{
+    max-width: 50%;
+    background-color: #e8e1d1;
+    border-radius: 25px;
+    padding: 25px;
+}
+
+.favorite-main2 img{
+    max-width: 50%;
+    background-color: #e8e1d1;
+    border-radius: 25px;
+    padding: 25px;
+}
+.favorite-main3 img{
+    max-width: 50%;
+    background-color: #e8e1d1;
+    border-radius: 25px;
+    padding: 25px;
+}
+
+.favorite-main4 img{
+    max-width: 50%;
+    background-color: #e8e1d1;
+    border-radius: 25px;
+    padding: 25px;
+}
+
+.favorite-mai {
+    margin-top: 100px;
+    display: flex;
+    
+    align-items: center;
+}
+/*favorite*/
+
+/*HOME*/
+
+.works-top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+    margin-top: 50px;
+    font-size: 150%;
+    letter-spacing: 0.3em;
+}
+
+.works-top img {
+    width: 50%;
+    border-radius: 25px;
+}
+
+.works-cont {
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    margin: 300px 50px 0 50px;
+}
+
+.works-cont1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    
+}
+
+
+
+.works-cont2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.ruruna {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.ruruna img {
+    border-radius: 25px;
+    width: 100%;
+}
+
+.about-top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+    margin-top: 50px;
+    letter-spacing: 0.3em;
+    font-size: 200%;
+}
+
+.about-top img {
+    width: 50%;
+    height: 150%;
+    border-radius: 25px;
+}
+
+.keireki {
+    display: flex;
+    flex-direction: column;
+    gap: 150px;
+}
+
+.keireki-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    margin-top: 300px;
+    margin-bottom: 200px;
+    font-size: 200%;
+    letter-spacing: 0.2em;
+}
+
+.keireki-title img {
+    width: 100px;
+}
+
+.syokureki {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0px;
+}
+
+.syokureki1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0px;
+}
+
+.aida {
+    width: 150px;
+}
+
+.film {
+    width: 80%;
+}
+
+.syokureki-cont {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+    text-align: center;
+    margin: 50px 0;
+}
+
+.syokureki-cont1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+    text-align: center;
+    margin: 50px 0;
+}
+
+.syokureki-cont img {
+    border-radius: 25px;
+    width: 50%;
+}
+
+.concept-top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+    margin-top: 50px;
+    font-size: 150%;
+    letter-spacing: 0.3em;
+}
+
+.concept-top img {
+    width: 50%;
+    border-radius: 25px;
+}
+
+.concept-cont {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+    margin: 300px 100px 0px 100px
+}
+
+.concept-cont h1 {
+    text-align: center;
+    color: #cd9500;
+    font-weight: bold;
+    font-family: Kalam;
+    font-size: 300%;
+}
+
+.concept-cont p {
+    font-size: 150%;
+    font-family: Tsukimi Rounded;
+}
+
+.costum {
+    display: flex;
+    justify-content: center;
+}
+
+.costum img {
+    border-radius: 25px;
+}
+
+.skill-top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+    margin-top: 50px;
+    letter-spacing: 0.3em;
+    font-size: 200%;
+}
+
+.skill-top img {
+    width: 50%;
+    border-radius: 25px;
+}
+
+.skill-main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 300px;
+    gap: 300px;
+}
+
+.design {
+    display: flex;
+    align-items: center;
+    gap: 100px;
+}
+
+.design-cont {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 150%;
+}
+
+.design-image {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+}
+
+.design-image img {
+    width: 150px;
+    background-color: #e8e1d1;
+    border-radius: 25px;
+}
+
+.front {
+    display: flex;
+    align-items: center;
+    gap: 120px;
+    margin-top: 100px;
+}
+
+.front-cont {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 150%;
+}
+
+.front-image {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+}
+
+.front-image img {
+    width: 150px;
+    background-color: #e8e1d1;
+    border-radius: 25px;
+}
+
+.back {
+    display: flex;
+    align-items: center;
+    gap: 130px;
+    margin-top: 100px;
+}
+
+.back-cont {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 150%;
+}
+
+.back-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+
+.back-image img {
+    width: 150px;
+    background-color: #e8e1d1;
+    border-radius: 25px;
+}
+
+.design-title,
+.front-title,
+.back-title {
+    font-size: 300%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.design-title img,
+.front-title img,
+.back-title img {
+    width: 100px;
+}
+
+.favorite-top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+    margin-top: 50px;
+    letter-spacing: 0.3em;
+    font-size: 2vw;
+}
+
+.favorite-top img {
+    width: 50%;
+    border-radius: 25px;
+}
+
+.favorite-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    margin: 300px 50px;
+}
+
+.coffee {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    border: 10px dashed #cd9500; /* 外枠のスタイル、太さ、色を指定 */
+    border-radius: 25px; /* 外枠の角を丸くする場合、任意の値を指定 */
+    padding: 50px 100px; /* 内側のコンテンツからの余白 */
+    margin-left: 10rem;
+}
+
+.coffee h2 {
+    text-align: center;
+}
+
+.coffee p {
+    text-align: left;
+    align-items: center;
+    justify-content: center;
+}
+
+.chocolate {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    padding: 50px 100px;
+    margin-right: 10rem;
+}
+
+.chocolate h2 {
+    text-align: center;
+}
+
+.chocolate p {
+    text-align: left;
+    align-items: center;
+    justify-content: center;
+}
+
+.book {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    border: 10px dashed #cd9500; /* 外枠のスタイル、太さ、色を指定 */
+    border-radius: 25px; /* 外枠の角を丸くする場合、任意の値を指定 */
+    padding: 50px 100px; /* 内側のコンテンツからの余白 */
+    margin-left: 10rem;
+}
+
+.book h2 {
+    text-align: center;
+}
+
+.book p {
+    text-align: left;
+    align-items: center;
+    justify-content: center;
+}
+
+.animal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    padding: 50px 100px;
+    margin-right: 10rem;
+}
+
+.animal h2 {
+    text-align: center;
+}
+
+.animal p {
+    text-align: left;
+    align-items: center;
+    justify-content: center;
+}
+
+.game {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    border: 10px dashed #cd9500; /* 外枠のスタイル、太さ、色を指定 */
+    border-radius: 25px; /* 外枠の角を丸くする場合、任意の値を指定 */
+    padding: 50px 100px; /* 内側のコンテンツからの余白 */
+    margin-left: 10rem;
+}
+
+.game h2 {
+    text-align: center;
+}
+
+.game p {
+    text-align: left;
+    align-items: center;
+    justify-content: center;
+}
+
+.sports {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    padding: 50px 100px;
+    margin-right: 10rem;
+}
+
+.sports h2 {
+    text-align: center;
+}
+
+.sports p {
+    text-align: left;
+    align-items: center;
+    justify-content: center;
+}
+
+.sing {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    border: 10px dashed #cd9500; /* 外枠のスタイル、太さ、色を指定 */
+    border-radius: 25px; /* 外枠の角を丸くする場合、任意の値を指定 */
+    padding: 50px 100px; /* 内側のコンテンツからの余白 */
+    margin-left: 10rem;
+}
+
+.sing h2 {
+    text-align: center;
+}
+
+.sing p {
+    text-align: left;
+    align-items: center;
+    justify-content: center;
+}
+
+.travel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    padding: 50px 100px;
+    margin-right: 10rem;
+}
+
+.travel h2 {
+    text-align: center;
+}
+
+.travel p {
+    text-align: left;
+    align-items: center;
+    justify-content: center;
+}
+
+.favorite-main img {
+    width: 150px;
+    background-color: #e8e1d1;
+    padding: 25px;
+    border-radius: 25px;
+}
+
+
+
+footer {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 100px;
+    background-color: #e8e1d1;
+}
+
+.human {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+    margin-top: 200px;
+}
+
+.read {
+    width: 50%;
+    align-items: center;
+}
+
+.foot {
+    display: flex;
+    justify-content: space-between;
+    gap: 100px;
+}
+
+.menu-f {
+    display: flex;
+    gap: 20px;
+    margin-right: 50px;
+}
+
+.menu-f1 {
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-f2 {
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-f a {
+    color: black; /* リンクの色 */
+    text-decoration: none; /* アンダーラインを削除 */
+    margin: 0 15px; /* リンク間の余白 */
+}
+
+footer p {
+    text-align: right;
+    margin-right: 50px;
+}
+
+.containor {
+    position: relative;
+    background:#F6F2EA;
+    height: 50vh;
+    margin-bottom: 100px;
+  }
+  
+  .wave {
+    position: absolute;
+    height: 70px;
+    width: 100%;
+    background:#F6F2EA;
+    bottom: 0;
+  }
+  
+  .wave::before, .wave::after {
+    content: "";
+    display: block;
+    position: absolute;
+    border-radius: 100% 50%;
+  }
+  
+  .wave::before {
+    width: 55%;
+    height: 109%;
+    background-color: #e8e1d1;
+    right: -1.5%;
+    top: 60%;
+  }
+  .wave::after {
+    width: 55%;
+    height: 100%;
+    background-color:#F6F2EA;
+    left: -1.5%;
+    top: 40%;
+  }
+
+html {
+    scroll-behavior: smooth;
+}
+.pagetop {
+    height: 50px;
+    width: 50px;
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    background: #fff;
+    border: solid 2px #000;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+
+.pagetop__arrow {
+    height: 10px;
+    width: 10px;
+    border-top: 3px solid #000;
+    border-right: 3px solid #000;
+    transform: translateY(20%) rotate(-45deg);
+}
+
+.run {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 200px;
+}
+
+.runrun {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 200px;
+}
+
+.runrun img {
+    width: 50%;
+    border-radius: 25px;
+    margin-left: 25px;
+}
+
+.runrun-cont {
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    background-color: rgba(205, 149, 0, 0.3);
+    padding: 95px 25px;
+    margin-right: 25px;
+    border-radius: 25px;
+}
+
+.run-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.run-title h1 {
+    font-family: Tsukimi Rounded;
+}
+
+.preview {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+    margin-top: 100px;
+}
+
+.preview img {
+    width: 25%;
+}
+
+.run-cont {
+    display: flex;
+    text-align: left;
+    flex-direction: column;
+    margin-top: 100px;
+}
+
+.comment {
+    margin-top: 200px;
+    width: 50%;
+}
+
+.comment h1 {
+    font-size: 300%;
+    text-align: center;
+    margin-bottom: 100px;
+    letter-spacing: 0.2em;
+}
+
+.run-final {
+    font-size: 2vw;
+    margin: 200px 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.run-final img {
+    width: 100px;
+    margin-top: 25px;
+}
+
+.designer {
+    width: 40%;
+    border-radius: 25px;
+}
+
+/* スマートフォンサイズの場合に適用されるスタイル */
+@media (max-width: 800px) {
+.Ryuji {
+    width: 80%;
+}
+
+ .top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: auto;
+    margin-top: 0;
+ } 
+
+ .drip {
+    width: 60%;
+ }
+
+ .top-image {
+    width: 100%;
+ }
+
+ .works-title {
+    font-size: 3vw;
+ }
+
+ .works-main img {
+    width: 90%;
+ }
+
+ .cloud img {
+    width: 90%;
+ }
+
+ .about-title {
+    font-size: 3vw;
+ }
+
+ .intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 2.5vw;
+    gap: 10px;
+    margin: 10px;
+ }
+
+ .myface {
+    width: 200px;
+    height: 200px;
+ }
+
+ .introduction {
+    margin: 0 30px;
+ }
+
+ .concept-title {
+    font-size: 3vw;
+ }
+
+ .costmer {
+    width: 90%;
+ }
+
+ .skill-title {
+    font-size: 3vw;
+ }
+
+ .skill-main1 {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    justify-content: center;
+    align-items: center;
+ }
+
+ .skill-main2 {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    justify-content: center;
+    align-items: center;
+ }
+
+ .skill-main3 {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    justify-content: center;
+    align-items: center;
+ }
+
+.skill-hontai {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+}
+
+ .skill-main1 img,
+ .skill-main2 img,
+ .skill-main3 img {
+    width: 100px;
+ }
+
+.favorite-title {
+    font-size: 3vw;
+}
+
+.favorite {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+}
+
+.favorite-mai {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    margin-top: 50px;
+}
+
+.favorite-main1 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+.favorite-main2 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+
+.favorite-main3 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+.favorite-main4 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+
+.favorite-main1 img,
+.favorite-main2 img,
+.favorite-main3 img,
+.favorite-main4 img {
+    width: 100px;
+    padding: 25px;
+}
+
+.more {
+    margin-top: 50px;
+}
+
+.foot img{
+    width: 300px;
+    margin-left: 10px;
+}
+
+.read {
+    width: 300px;
+}
+
+.menu-f {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+}
+
+.menu-f1 {
+    font-size: 5vw;
+}
+
+.menu-f2 {
+    font-size: 5vw;
+}
+
+.works {
+    margin-top: 50px;
+}
+
+.about {
+    margin-top: 50px;
+}
+
+.concept {
+    margin-top: 50px;
+}
+
+.concept-cont h1 {
+    line-height: 1.2em;
+    letter-spacing: 0.2em;
+}
+
+.concept-cont p {
+    margin: 0 50px 0 50px;
+}
+
+
+.skill {
+    margin-top: 50px;
+}
+
+.favorite {
+    margin-top: 50px;
+}
+
+.works-main {
+    margin-top: 50px;
+}
+
+.concept-main {
+    margin-top: 50px;
+}
+
+.skill-main1 {
+    margin-top: 0px;
+}
+
+.favorite-main1 {
+    margin-top: 0px;
+}
+
+footer {
+    margin-top: 0;
+}
+.containor{
+    height: 100px;
+}
+
+.human {
+    margin-top: 0;
+}
+
+.foot {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.works-top {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.works-top img {
+    width: 90%;
+}
+
+.works-cont1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.works-cont2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.ruruna img {
+    width: 90%;
+}
+
+.skill-top {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 5vw;
+    gap: 10px;
+}
+
+.skill-top img {
+    width: 90%;
+}
+
+.skill-main {
+    gap: 50px;
+}
+
+.design {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0px;
+    gap: 50px;
+}
+
+.design-title {
+    font-size: 5vw;
+}
+
+.design-image img {
+    width: 100px;
+}
+
+.design-cont {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 50px;
+}
+
+.design-inv {
+    font-size: 4vw;
+}
+
+.front {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0px;
+    gap: 50px;
+}
+
+.front-title {
+    font-size: 5vw;
+}
+
+.front-image img {
+    width: 100px;
+}
+
+.front-cont {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 50px;
+}
+
+.front-inv {
+    font-size: 4vw;
+}
+
+.back {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0px;
+    gap: 50px;
+}
+
+.back-title {
+    font-size: 5vw;
+}
+
+.back-image img {
+    width: 100px;
+}
+
+.back-cont {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 50px;
+}
+
+.back-inv {
+    font-size: 4vw;
+}
+
+.favorite-top {
+    display: flex;
+    flex-direction: column;
+    font-size: 5vw;
+    gap: 0;
+}
+
+.favorite-top img {
+    width: 90%;
+}
+
+.favorite-main {
+    margin-top: 50px;
+}
+
+.coffee {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 0px;
+    border: 10px dashed #cd9500; /* 外枠のスタイル、太さ、色を指定 */
+    border-radius: 25px; /* 外枠の角を丸くする場合、任意の値を指定 */
+    padding: 20px; /* 内側のコンテンツからの余白 */
+    margin: 0 30px;
+}
+
+.chocolate {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 0px;
+    border: 10px dashed #cd9500; /* 外枠のスタイル、太さ、色を指定 */
+    border-radius: 25px; /* 外枠の角を丸くする場合、任意の値を指定 */
+    padding: 20px; /* 内側のコンテンツからの余白 */
+    margin: 0 30px;
+}
+
+.book {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 0px;
+    border: 10px dashed #cd9500; /* 外枠のスタイル、太さ、色を指定 */
+    border-radius: 25px; /* 外枠の角を丸くする場合、任意の値を指定 */
+    padding: 20px; /* 内側のコンテンツからの余白 */
+    margin: 0 30px;
+}
+
+.animal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 0px;
+    border: 10px dashed #cd9500; /* 外枠のスタイル、太さ、色を指定 */
+    border-radius: 25px; /* 外枠の角を丸くする場合、任意の値を指定 */
+    padding: 20px; /* 内側のコンテンツからの余白 */
+    margin: 0 30px;
+}
+
+.game {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 0px;
+    border: 10px dashed #cd9500; /* 外枠のスタイル、太さ、色を指定 */
+    border-radius: 25px; /* 外枠の角を丸くする場合、任意の値を指定 */
+    padding: 20px; /* 内側のコンテンツからの余白 */
+    margin: 0 30px;
+}
+
+.sports {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 0px;
+    border: 10px dashed #cd9500; /* 外枠のスタイル、太さ、色を指定 */
+    border-radius: 25px; /* 外枠の角を丸くする場合、任意の値を指定 */
+    padding: 20px; /* 内側のコンテンツからの余白 */
+    margin: 0 30px;
+}
+
+.sing {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 0px;
+    border: 10px dashed #cd9500; /* 外枠のスタイル、太さ、色を指定 */
+    border-radius: 25px; /* 外枠の角を丸くする場合、任意の値を指定 */
+    padding: 20px; /* 内側のコンテンツからの余白 */
+    margin: 0 30px;
+}
+
+.travel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 0px;
+    border: 10px dashed #cd9500; /* 外枠のスタイル、太さ、色を指定 */
+    border-radius: 25px; /* 外枠の角を丸くする場合、任意の値を指定 */
+    padding: 20px; /* 内側のコンテンツからの余白 */
+    margin: 0 30px;
+}
+
+.about-top {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 5vw;
+    gap: 50px;
+}
+
+.about-top img {
+    width: 90%;
+}
+
+.keireki {
+    gap: 50px;
+}
+
+.syokureki-cont {
+    flex-direction: column;
+    font-size: 4vw;
+    gap: 25px;
+}
+
+.syokureki-cont img {
+    width: 80%;
+}
+
+.syokureki-cont1 {
+    flex-direction: column;
+    gap: 25px;
+}
+
+.syokureki-cont1 img {
+    width: 80%;
+}
+
+.aida {
+    width: 25%;
+}
+
+.keireki-title {
+    font-size: 4vw;
+    margin: 100px 0 50px 0;
+}
+
+.keireki-title img {
+    width: 25%;
+}
+
+.concept-top {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 5vw;
+    gap: 50px;
+}
+
+.concept-top img {
+    width: 80%;
+}
+
+.concept-cont {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    margin: 100px 30px;
+}
+
+.concept-cont h1 {
+    font-size: 10vw;
+}
+
+.concept-cont p {
+    font-size: 4vw;
+}
+
+.run-title {
+    text-align: center;
+}
+
+.preview {
+    flex-direction: column;
+}
+
+.preview img {
+    width: 80%;
+}
+
+.run-cont {
+    font-size: 3vw;
+}
+
+.comment {
+    font-size: 4vw;
+    margin-top: 100px;
+    width: 80%;
+}
+
+.comment h1 {
+    font-size: 8vw;
+    margin-bottom: 50px;
+}
+
+.runrun {
+    flex-direction: column;
+    justify-content:stretch;
+    align-items: center;
+    gap: 10px;
+    margin-top: 50px;
+}
+
+.runrun-cont {
+    font-size: 3vw;
+    gap: 10px;
+    padding: 20px;
+    margin: 0 30px;
+}
+
+.runrun img {
+    margin: 0 30px;
+    width: 80%;
+}
+
+.run-final {
+    width: 80%;
+}
+}
