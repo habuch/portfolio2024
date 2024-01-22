@@ -766,14 +766,16 @@ h2 {
     margin-left: 10rem;
 }
 
-.coffee h2 {
+.coffee-cont h2 {
     text-align: center;
+    font-size: 5vw;
 }
 
-.coffee p {
+.coffee-cont p {
     text-align: left;
     align-items: center;
     justify-content: center;
+    font-size: 2vw;
 }
 
 .chocolate {
@@ -785,14 +787,16 @@ h2 {
     margin-right: 10rem;
 }
 
-.chocolate h2 {
+.chocolate-cont h2 {
     text-align: center;
+    font-size: 5vw;
 }
 
-.chocolate p {
+.chocolate-cont p {
     text-align: left;
     align-items: center;
     justify-content: center;
+    font-size: 2vw;
 }
 
 .book {
@@ -806,14 +810,16 @@ h2 {
     margin-left: 10rem;
 }
 
-.book h2 {
+.book-cont h2 {
     text-align: center;
+    font-size: 5vw;
 }
 
-.book p {
+.book-cont p {
     text-align: left;
     align-items: center;
     justify-content: center;
+    font-size: 2vw;
 }
 
 .animal {
@@ -825,14 +831,16 @@ h2 {
     margin-right: 10rem;
 }
 
-.animal h2 {
+.animal-cont h2 {
     text-align: center;
+    font-size: 5vw;
 }
 
-.animal p {
+.animal-cont p {
     text-align: left;
     align-items: center;
     justify-content: center;
+    font-size: 2vw;
 }
 
 .game {
@@ -846,14 +854,16 @@ h2 {
     margin-left: 10rem;
 }
 
-.game h2 {
+.game-cont h2 {
     text-align: center;
+    font-size: 5vw;
 }
 
-.game p {
+.game-cont p {
     text-align: left;
     align-items: center;
     justify-content: center;
+    font-size: 2vw;
 }
 
 .sports {
@@ -865,14 +875,16 @@ h2 {
     margin-right: 10rem;
 }
 
-.sports h2 {
+.sports-cont h2 {
     text-align: center;
+    font-size: 5vw;
 }
 
-.sports p {
+.sports-cont p {
     text-align: left;
     align-items: center;
     justify-content: center;
+    font-size: 2vw;
 }
 
 .sing {
@@ -886,14 +898,16 @@ h2 {
     margin-left: 10rem;
 }
 
-.sing h2 {
+.sing-cont h2 {
     text-align: center;
+    font-size: 5vw;
 }
 
-.sing p {
+.sing-cont p {
     text-align: left;
     align-items: center;
     justify-content: center;
+    font-size: 2vw;
 }
 
 .travel {
@@ -905,14 +919,16 @@ h2 {
     margin-right: 10rem;
 }
 
-.travel h2 {
+.travel-cont h2 {
     text-align: center;
+    font-size: 5vw;
 }
 
-.travel p {
+.travel-cont p {
     text-align: left;
     align-items: center;
     justify-content: center;
+    font-size: 2vw;
 }
 
 .favorite-main img {
